@@ -15,11 +15,11 @@ function NoMatch() {
 }
 
 function LocationDisplay() {
-  const location = useLocation();
+  const { pathname } = useLocation();
 
   return (
     <div data-testid="location-display">
-      <h3 data-testid="location">{location.pathname}</h3>
+      <p>Current URL: {pathname}</p>
     </div>
   );
 }
