@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link, useLocation } from "react-router-dom";
 import "../styles/App.css";
+import LocationDisplay from './LocationDisplay';
 
 function Home() {
   return <h2>You are home.</h2>;
@@ -14,15 +15,6 @@ function NoMatch() {
   return <h2>No match.</h2>;
 }
 
-function LocationDisplay() {
-  const { pathname } = useLocation();
-
-  return (
-    <div data-testid="location-display">
-      <p>Current URL: {pathname}</p>
-    </div>
-  );
-}
 
 function App() {
   return (
